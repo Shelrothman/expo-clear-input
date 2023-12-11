@@ -19,6 +19,9 @@
         "ios",
         "android"
     ],
+    "jest": {
+        "preset": "expo-module-scripts"
+    },
     "author": "",
     "license": "MIT",
     "types": "./ClearControlTextInput.d.ts",
