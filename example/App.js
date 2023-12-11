@@ -1,5 +1,4 @@
-// import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React from 'react';
 import {
     StyleSheet,
     Text,
@@ -19,16 +18,15 @@ export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             {/* <ClearControlTextInput props={props} /> */}
-            {/* <View style={{ padding: 10 }}> */}
+            <View style={{ padding: 10 }}>
 
                 <ClearControlTextInput
                     onChangeText={(text) => setText(text)}
                     value={text}
                     placeholder={'Enter a task'}
                     placeholderTextColor={'#ccc8c8'}
-                    multiline={false}
-                    // multiline={true}
-                    // mode='unless-editing'
+                    // multiline={false}
+                    multiline={true}
                     secureTextEntry={false}
                     keyboardType={'default'}
                     returnKeyType={'done'}
@@ -36,10 +34,8 @@ export default function App() {
                     // rodo: default dark grey
                     backgroundColor={'#252326'}
                 // TODO: percentage
-                // textInputProps={{ placeholder: 'Enter a task' }}
-
                 />
-            {/* </View> */}
+            </View>
         </SafeAreaView>
     );
 }

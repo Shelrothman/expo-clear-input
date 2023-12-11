@@ -1,6 +1,6 @@
 import React, { Fragment, useRef } from "react";
 import { Octicons } from '@expo/vector-icons';
-
+// import { TextInputProps } from 'react-native';
 import {
     StyleSheet,
     Text,
@@ -19,6 +19,23 @@ export function ClearControlTextInput(props) {
     const textInputRef = useRef(null);
     // const textColor = props.style === 'dark' ? 'white' : 'black';
 
+    const iconElement = props.icon ? props.icon : <Octicons name="x-circle-fill" size={16} color="#ccc8c8" />;
+
+
+    const conditionalMode = () => {
+        switch (props.mode) {
+            case 'always':
+                //  if its always then it should be visible whether or not its in focus
+                return true;
+            case 'while-editing':
+                // if its while editing then it should be visible only when its in focus
+                return inFocus;
+            case 'unless-editing':
+                // if its unless-editing then it should be visible only when its not in focus
+                return !inFocus;
+            default: return inFocus;
+        }
+    };
 
     return (
         <View
@@ -42,16 +59,46 @@ export function ClearControlTextInput(props) {
                 onBlur={() => setInFocus(false)}
                 secureTextEntry={props.secureTextEntry}
                 keyboardType={props.keyboardType}
-                // scrollEnabled={props.multiline}
                 returnKeyType={props.returnKeyType}
-            // {...props.textInputProps}
+                // its like i want all of them ezxcept the ones specific to ios and android...
+                // TODO: these can just be a spresad but putthese al;l in type file./..
+                allowFontScaling={props.allowFontScaling}
+                autoCapitalize={props.autoCapitalize}
+                autoComplete={props.autoComplete}
+                autoCorrect={props.autoCorrect}
+                autoFocus={props.autoFocus}
+                blurOnSubmit={props.blurOnSubmit}
+                caretHidden={props.caretHidden}
+                contextMenuHidden={props.contextMenuHidden}
+                defaultValue={props.defaultValue}
+                editable={props.editable}
+                enterKeyHint={props.enterKeyHint}
+                inputMode={props.inputMode}
+                maxFontSizeMultiplier={props.maxFontSizeMultiplier}
+                maxLength={props.maxLength}
+                onChange={props.onChange}
+                onContentSizeChange={props.onContentSizeChange}
+                onEndEditing={props.onEndEditing}
+                onPressIn={props.onPressIn}
+                onPressOut={props.onPressOut}
+                onKeyPress={props.onKeyPress}
+                onLayout={props.onLayout}
+                onScroll={props.onScroll}
+                onSelectionChange={props.onSelectionChange}
+                onSubmitEditing={props.onSubmitEditing}
+                readOnly={props.readOnly}
+                selection={props.selection}
+                selectionColor={props.selectionColor}
+                selectTextOnFocus={props.selectTextOnFocus}
+                showSoftInputOnFocus={props.showSoftInputOnFocus}
+                textAlign={props.textAlign}
             />
-            {inFocus && <Pressable
+
+            {conditionalMode() && <Pressable
                 onPress={() => textInputRef.current.clear()}
                 style={styles.clearButtonParent}
             >
-                <Octicons name="x-circle-fill" size={16} color="#ccc8c8" />
-
+                {iconElement}
             </Pressable>}
         </View>
     );
