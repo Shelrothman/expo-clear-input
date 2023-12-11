@@ -1,0 +1,17 @@
+{
+    "platforms": [
+        "ios",
+        "android",
+        "web"
+    ],
+    "ios": {
+        "modules": [
+            "ExpoClearInputModule"
+        ]
+    },
+    "android": {
+        "modules": [
+            "expo.modules.clearinput.ExpoClearInputModule"
+        ]
+    }
+}
