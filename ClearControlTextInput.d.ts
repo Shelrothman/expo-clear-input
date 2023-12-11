@@ -1,4 +1,4 @@
-import { AccessibilityProps } from 'react-native';
+import { AccessibilityProps, ColorValue, EnterKeyHintTypeOptions, InputModeOptions, KeyboardTypeOptions, NativeSyntheticEvent, NativeTouchEvent, ReturnKeyTypeOptions, TextInputChangeEventData, TextInputContentSizeChangeEventData, TextInputEndEditingEventData, TextInputFocusEventData, TextInputKeyPressEventData, TextInputScrollEventData, TextInputSelectionChangeEventData, TextInputSubmitEditingEventData, TextInputTextInputEventData } from 'react-native';
 
 /**
  * @interface ClearControlTextInputProps
@@ -8,10 +8,9 @@ export interface ClearControlTextInputProps {
     /**
      * all cross-platform-compatible props 
      * from @type {import('react-native').TextInputProps} 
-     * except for style, which are handled by this component
+     * except for style, which is handled by this component
      */
     textInputProps?: AccessibilityProps & {
-        // info: we dont need VIewProps here, because we are not rendering a View
         /**
          * Specifies whether fonts should scale to respect Text Size accessibility settings.
          * The default is `true`.

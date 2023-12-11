@@ -1,0 +1,28 @@
+{
+    "name": "expo-clear-input",
+    "version": "1.0.0",
+    "description": "",
+    "main": "ClearControlTextInput.js",
+    "scripts": {
+        "build": "expo-module build",
+        "clean": "expo-module clean",
+        "test": "expo-module test",
+        "prepare": "expo-module prepare",
+        "prepublishOnly": "expo-module prepublishOnly",
+        "expo-module": "expo-module"
+    },
+    "keywords": [
+        "expo",
+        "react-native",
+        "cross-platform",
+        "clear",
+        "ios",
+        "android"
+    ],
+    "author": "",
+    "license": "MIT",
+    "types": "./ClearControlTextInput.d.ts",
+    "devDependencies": {
+        "expo-module-scripts": "^3.1.0"
+    }
+}

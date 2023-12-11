@@ -23,11 +23,6 @@ export function ClearControlTextInput(props) {
             case 'unless-editing': return !inFocus;
             default: return inFocus;
         }
-
-        /*
-        it is true if ->  inFocus && mode === 'while-editing' || !inFocus && mode === 'unless-editing' || mode === 'always'
-        it is false if -> inFocus && mode === 'unless-editing' || !inFocus && mode === 'while-editing'
-        */
     };
 
     const handleFocus = () => {
