@@ -1,20 +1,39 @@
-import { StyleSheet, Text, View } from 'react-native';
-
-import * as ExpoClearInput from 'expo-clear-input';
+import React from 'react';
+import { StyleSheet, SafeAreaView } from 'react-native';
+import { ClearControlTextInput } from 'expo-clear-input';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>{ExpoClearInput.hello()}</Text>
-    </View>
-  );
+
+
+    const [ text, setText ] = React.useState('');
+
+
+    return (
+        <SafeAreaView style={styles.container}>
+            <ClearControlTextInput
+                textInputProps={{
+                    onChangeText: (text) => setText(text),
+                    value: text,
+                    placeholder: 'Enter a task',
+                    placeholderTextColor: '#ccc8c8',
+                    multiline: false,
+                    secureTextEntry: false,
+                    keyboardType: 'default',
+                    returnKeyType: 'done',
+                }}
+                textColor={'white'}
+                showButtonMode= {'while-editing'}
+                backgroundColor={'#252326'}
+            />
+        </SafeAreaView>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#000',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
