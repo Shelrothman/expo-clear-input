@@ -32,7 +32,7 @@ export default function App() {
                     // todo: default dark grey
                 }}
                 textColor={'white'}
-                showButtonMode= {'always'}
+                showButtonMode= {'while-editing'}
                 backgroundColor={'#252326'}
             />
         </SafeAreaView>

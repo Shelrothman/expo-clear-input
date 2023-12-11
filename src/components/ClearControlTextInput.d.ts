@@ -4,9 +4,7 @@ import { AccessibilityProps } from 'react-native';
  * @interface ClearControlTextInputProps
  */
 export interface ClearControlTextInputProps {
-    // export interface ClearControlTextInputProps extends TextInputProps {
-
-
+    
     /**
      * all cross-platform-compatible props 
      * from @type {import('react-native').TextInputProps} 
@@ -357,13 +355,13 @@ export interface ClearControlTextInputProps {
    
    /**
     * backgroundColor - color of the input background
-     * @default '#000'
+     * @default '#252326'
      */
     backgroundColor?: string;
 
     /**
-     * placement
      * The vertical placement of the clear button, always on the right side
+     * only relevant for multiline inputs
      * @default 'top'
      */
     verticalPlacement?: 'top' | 'middle' | 'bottom';
@@ -381,10 +379,10 @@ export interface ClearControlTextInputProps {
      * @default <Octicons name="x-circle-fill" size={16} color="#ccc8c8" />
      */
     icon: JSX.Element;
-    /** 
-     * iconSize - size of the icon
-     * @default 16
-     */
+    // /** 
+    //  * iconSize - size of the icon
+    //  * @default 16
+    //  */
     // iconSize: number; ???: maybe dont want them to be able to do this .../
 
 }
