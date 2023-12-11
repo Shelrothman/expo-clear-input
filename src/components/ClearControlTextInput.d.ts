@@ -351,19 +351,16 @@ export interface ClearControlTextInputProps {
 
     /**
      * textColor - color of the text in the input
-     */
-    textColor?: string;
-
-    /**
-     * backgroundColor - color of the input background
+     * @default '#fff'
+    */
+   textColor?: string;
+   
+   /**
+    * backgroundColor - color of the input background
+     * @default '#000'
      */
     backgroundColor?: string;
 
-    /**
-     * theme - dark or light background
-     * @default 'dark'
-     */
-    theme?: 'dark' | 'light';
     /**
      * placement
      * The vertical placement of the clear button, always on the right side
@@ -373,6 +370,9 @@ export interface ClearControlTextInputProps {
     /** 
      * showButtonMode
      * The mode of the clear button.
+     * 'always' - visible whether or not its in focus
+     * 'while-editing' - visible only when the input is in focus
+     * 'unless-editing' - visible only when the input is not in focus
      * @default 'while-editing'
      */
     showButtonMode?: 'always' | 'while-editing' | 'unless-editing';

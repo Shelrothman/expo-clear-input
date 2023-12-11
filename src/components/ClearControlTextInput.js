@@ -1,16 +1,8 @@
 import React, { Fragment, useRef } from "react";
 import { Octicons } from '@expo/vector-icons';
-// import { TextInputProps } from 'react-native';
-import {
-    StyleSheet,
-    Text,
-    View,
-    SafeAreaView,
-    TextInput,
-    TextInputProps, Pressable
-} from 'react-native';
+import { StyleSheet, View, TextInput, Pressable } from 'react-native';
 
-
+// PICKUP: in here test this is all working and then start getting the build set up
 
 
 
@@ -19,27 +11,34 @@ export function ClearControlTextInput(props) {
     const textInputRef = useRef(null);
     const iconElement = props.icon ? props.icon : <Octicons name="x-circle-fill" size={16} color="#ccc8c8" />;
 
-
-    const conditionalMode = () => {
-        switch (props.mode) {
-            //  if its always then it should be visible whether or not its in focus
+    /**
+     * @function conditionalMode - determines whether or not the clear button should be visible
+     * @param {string} mode - the mode that the clear button should be visible in
+     * @returns {boolean} whether or not the clear button should be visible
+     */
+    const conditionalMode = (mode) => {
+        switch (mode) {
             case 'always': return true;
-            // if its while editing then it should be visible only when its in focus
             case 'while-editing': return inFocus;
-            // if its unless-editing then it should be visible only when its not in focus
             case 'unless-editing': return !inFocus;
             default: return inFocus;
         }
+
+        /*
+        it is true if ->  inFocus && mode === 'while-editing' || !inFocus && mode === 'unless-editing' || mode === 'always'
+        it is false if -> inFocus && mode === 'unless-editing' || !inFocus && mode === 'while-editing'
+        */
     };
 
-    // TODO: test these out
     const handleFocus = () => {
         setInFocus(true);
-        props.onFocus && props.onFocus();
+        if (props.onFocus) props.onFocus();
+        return;
     };
     const handleBlur = () => {
         setInFocus(false);
-        props.onBlur && props.onBlur();
+        if (props.onBlur) props.onBlur();
+        return;
     };
 
     return (
@@ -50,26 +49,24 @@ export function ClearControlTextInput(props) {
             ]}
         >
             <TextInput
-                // onChangeText={props.onChangeText}
-                // placeholder={props.placeholder}
-                // value={props.value}
                 style={[
                     styles.input,
                     { color: props.textColor }
                 ]}
                 ref={textInputRef}
-                onFocus={handleFocus}
                 onBlur={handleBlur}
-                // onBlur={() => setInFocus(false)}
+                onFocus={handleFocus}
                 {...props.textInputProps}
             />
 
-            {conditionalMode() && <Pressable
-                onPress={() => textInputRef.current.clear()}
-                style={styles.clearButtonParent}
-            >
-                {iconElement}
-            </Pressable>}
+            {((inFocus && props.showButtonMode === 'while-editing') ||
+                (!inFocus && props.showButtonMode === 'unless-editing') ||
+                (props.showButtonMode === 'always')) && <Pressable
+                    onPress={() => textInputRef.current.clear()}
+                    style={styles.clearButtonParent}
+                >
+                    {iconElement}
+                </Pressable>}
         </View>
     );
 }
