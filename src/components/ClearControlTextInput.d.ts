@@ -365,6 +365,7 @@ export interface ClearControlTextInputProps {
      * @default 'top'
      */
     verticalPlacement?: 'top' | 'middle' | 'bottom';
+    
     /** 
      * showButtonMode
      * The mode of the clear button.

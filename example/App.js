@@ -1,13 +1,12 @@
-import React from 'react';
+// import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
 import {
     StyleSheet,
     Text,
     SafeAreaView,
     View
-    // TextInput,
-    // Pressable
 } from 'react-native';
-import { ClearControlTextInput } from "./src/components/ClearControlTextInput";
+import { ClearControlTextInput } from "./ClearControlTextInput";
 
 // TODO: remove container stling after dev
 export default function App() {
@@ -15,27 +14,27 @@ export default function App() {
     const [ text, setText ] = React.useState('');
 
     // info: basically this houses all teh defaults i will seet ip
+
+    // TODO: move this to example distro
+
     return (
         <SafeAreaView style={styles.container}>
-            {/* <ClearControlTextInput props={props} /> */}
-            <View style={{ padding: 10 }}>
-
-                <ClearControlTextInput
-                    onChangeText={(text) => setText(text)}
-                    value={text}
-                    placeholder={'Enter a task'}
-                    placeholderTextColor={'#ccc8c8'}
-                    // multiline={false}
-                    multiline={true}
-                    secureTextEntry={false}
-                    keyboardType={'default'}
-                    returnKeyType={'done'}
-                    textColor={'white'}
-                    // rodo: default dark grey
-                    backgroundColor={'#252326'}
-                // TODO: percentage
-                />
-            </View>
+            <ClearControlTextInput
+                textInputProps={{
+                    onChangeText: (text) => setText(text),
+                    value: text,
+                    placeholder: 'Enter a task',
+                    placeholderTextColor: '#ccc8c8',
+                    multiline: false,
+                    secureTextEntry: false,
+                    keyboardType: 'default',
+                    returnKeyType: 'done',
+                    // todo: default dark grey
+                }}
+                textColor={'white'}
+                showButtonMode= {'unless-editing'}
+                backgroundColor={'#252326'}
+            />
         </SafeAreaView>
     );
 }
