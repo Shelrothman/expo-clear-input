@@ -11,20 +11,6 @@ export function ClearControlTextInput(props) {
     const textInputRef = useRef(null);
     const iconElement = props.icon ? props.icon : <Octicons name="x-circle-fill" size={16} color="#ccc8c8" />;
 
-    /**
-     * @function conditionalMode - determines whether or not the clear button should be visible
-     * @param {string} mode - the mode that the clear button should be visible in
-     * @returns {boolean} whether or not the clear button should be visible
-     */
-    const conditionalMode = (mode) => {
-        switch (mode) {
-            case 'always': return true;
-            case 'while-editing': return inFocus;
-            case 'unless-editing': return !inFocus;
-            default: return inFocus;
-        }
-    };
-
     const handleFocus = () => {
         setInFocus(true);
         if (props.onFocus) props.onFocus();
