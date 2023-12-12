@@ -5,11 +5,16 @@
 
 [![npm version](https://badge.fury.io/js/expo-clear-input.svg)](https://badge.fury.io/js/expo-clear-input)
 <!-- [![npm downloads](https://img.shields.io/npm/dm/expo-clear-input.svg)](https://npm-stat.com/charts.html?package=expo-clear-input&from=2022-08-01) -->
-![android](https://img.shields.io/badge/android-yes-green.svg)
-![ios](https://img.shields.io/badge/iOS-yes-green.svg)
-![web](https://img.shields.io/badge/web-yes-green.svg)
+[![supports iOS](https://img.shields.io/badge/iOS-999999.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff)](https://github.com/expo/expo)
+[![supports Android](https://img.shields.io/badge/Android-A4C639.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff)](https://github.com/expo/expo)
+[![supports web](https://img.shields.io/badge/Web-4285F4.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff)](https://github.com/expo/expo)
 
 A cross-platform clear button to use in a `TextInput` for [React Native](https://reactnative.dev/) apps built with [Expo](https://expo.dev/).
+
+## 📲 Demo
+
+[![Demo in Expo Snack](https://img.shields.io/badge/INTERACTIVE%20DEMO%20IN%20SNACK-000.svg?style=for-the-badge&logo=EXPO&labelColor=FFF&logoColor=000)](https://snack.expo.dev/@nini_bee/clearcontroltextinput-example)
+
 
 ## 🔬 Why This Library?
 
@@ -23,7 +28,6 @@ The [TextInput](https://reactnative.dev/docs/0.72/textinput) component has a [cl
 - [React Native](https://reactnative.dev/) version 0.63 or higher
 - [Expo](https://expo.dev/) version 42 or higher
 - [React](https://reactjs.org/) version 17 or higher
-
 
 ## 📠 Installation
 
@@ -49,11 +53,9 @@ export default function App() {
                     onChangeText: (text) => setText(text),
                     value: text,
                     placeholder: 'enter search...',
-                    keyboardType: 'default',
                     returnKeyType: 'done',
                 }}
-                textColor={'white'}
-                showButtonMode= {'always'}
+                showButtonMode={'always'}
             />
             </View>
         </SafeAreaView>
@@ -78,11 +80,6 @@ Supports custom icon for the button or use the default(recommended)
 | verticalPlacement | `'top'`<br>`'center'`<br>`'bottom'` | The vertical placement of the input field (always on the right side) | `'center'` |
 | showButtonNode | `boolean` | Whether to show the button node; 'always' - visible whether or not its in focus. 'while-editing' - visible only when the input is in focus. 'unless-editing' - visible only when the input is not in focus | `while-editing` |
 | icon | `ReactNode` | The icon to be displayed | `<Octicons name="x-circle-fill" size={16} color="#ccc8c8" />` |
-
-
-## 📲 Example
-
-Check out the [Interactive Demo on Snack](https://snack.expo.dev/@nini_bee/clearcontroltextinput-example)!
 
 ## 👥 Contributing
 
