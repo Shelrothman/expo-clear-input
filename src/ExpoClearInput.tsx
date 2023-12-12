@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Octicons } from '@expo/vector-icons';
 import { StyleSheet, View, TextInput, Pressable, NativeSyntheticEvent, TextInputFocusEventData } from 'react-native';
 import ClearControlTextInputProps from "./ExpoClearInput.types";
 
 export default function ClearControlTextInput(props: ClearControlTextInputProps) {
     const [ inFocus, setInFocus ] = React.useState(false);
-    const textInputRef = useRef<TextInput>(null);
+    // const [ inputValue, setInputValue ] = React.useState(props.textInputProps?.value || '');
+    const textInputRef = React.useRef<TextInput>(null);
     const iconElement = props.icon ? props.icon : <Octicons name="x-circle-fill" size={16} color="#ccc8c8" />;
 
     const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
