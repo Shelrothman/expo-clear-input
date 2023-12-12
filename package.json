@@ -1,6 +1,6 @@
 {
     "name": "expo-clear-input",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "A cross-platform clear button to use in text inputs for React Native apps built with Expo.",
     "main": "build/index.js",
     "types": "build/index.d.ts",

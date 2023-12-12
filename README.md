@@ -1,5 +1,6 @@
 
-> [!WARNING]
+> WARNING: 
+> 
 > This package is not officially supported by Expo. It is experimental. Use at your own risk.
 
 # expo-clear-input
