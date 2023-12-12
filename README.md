@@ -1,7 +1,9 @@
+
+> [!WARNING]
 > This package is not officially supported by Expo. It is experimental. Use at your own risk.
 
 # expo-clear-input
-A cross-platform clear button to use in text inputs for React Native apps built with Expo
+A cross-platform clear button to use in text inputs for [React Native](https://reactnative.dev/) apps built with [Expo](https://expo.dev/).
 
 ## What is This?
 
@@ -14,6 +16,39 @@ The [TextInput](https://reactnative.dev/docs/0.72/textinput) component has a [cl
 ```sh
 npm install expo-clear-input
 ```
+
+## Usage
+
+```jsx
+import React from 'react';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
+import { ClearControlTextInput } from 'expo-clear-input';
+
+export default function App() {
+
+    const [ text, setText ] = React.useState('');
+
+    return (
+        <SafeAreaView style={{ flex: 1, backgroundColor: '#000', alignItems: 'center', justifyContent: 'center', }}>
+            <View style={{ marginHorizontal: 20, marginBottom: 20, width: "80%" }}>
+            <ClearControlTextInput
+                textInputProps={{
+                    onChangeText: (text) => setText(text),
+                    value: text,
+                    placeholder: 'enter search...',
+                    keyboardType: 'default',
+                    returnKeyType: 'done',
+                }}
+                textColor={'white'}
+                showButtonMode= {'always'}
+                backgroundColor={'#252326'}
+            />
+            </View>
+        </SafeAreaView>
+    );
+}
+```
+
 
 Supports custom icon for the button or use the default(recommended) 
 
