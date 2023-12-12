@@ -1,24 +1,38 @@
 
-> WARNING: 
-> 
-> This package is not officially supported by Expo. It is experimental. Use at your own risk.
+> This is not an official Expo SDK package.
 
-# expo-clear-input
-A cross-platform clear button to use in text inputs for [React Native](https://reactnative.dev/) apps built with [Expo](https://expo.dev/).
+# ❎ Expo Clear Input 📝
 
-## What is This?
+[![npm version](https://badge.fury.io/js/expo-clear-input.svg)](https://badge.fury.io/js/expo-clear-input)
+<!-- [![npm downloads](https://img.shields.io/npm/dm/expo-clear-input.svg)](https://npm-stat.com/charts.html?package=expo-clear-input&from=2022-08-01) -->
+![android](https://img.shields.io/badge/android-yes-green.svg)
+![ios](https://img.shields.io/badge/iOS-yes-green.svg)
+![web](https://img.shields.io/badge/web-yes-green.svg)
+
+A cross-platform clear button to use in a `TextInput` for [React Native](https://reactnative.dev/) apps built with [Expo](https://expo.dev/).
+
+## 🔬 Why This Library?
 
 The [TextInput](https://reactnative.dev/docs/0.72/textinput) component has a [clearButtonMode](https://reactnative.dev/docs/0.72/textinput#clearbuttonmode-ios) prop but it only support ios and not android. In addition to that, it only works in single-line mode and not multiline.
 
 **This library is a solution to the above by working on any platform (web, ios, android) *and* in both single and muilti line `<TextInput>`s.**
 
-## Installation
+![Android and iOS Example](https://private-user-images.githubusercontent.com/62257716/289743965-d04ff8e1-044f-4131-9fd3-c923c81e532d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDIzNTUzNzMsIm5iZiI6MTcwMjM1NTA3MywicGF0aCI6Ii82MjI1NzcxNi8yODk3NDM5NjUtZDA0ZmY4ZTEtMDQ0Zi00MTMxLTlmZDMtYzkyM2M4MWU1MzJkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjEyVDA0MjQzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdkMjAyODUxNDYzNGYxNDQ1N2RhMGNlYzE4YmFmZGFhMjcwMjI1ZDdkMTRmMTQ2OWM3MjM5ZjY3NWZiNTJhN2QmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.5y0YdoUWLXlWEc2Xv5M8GneO9YnAY6iFjUvj61Fpghc)
 
-```sh
+
+## ☑️ Prerequisites
+- [React Native](https://reactnative.dev/) version 0.63 or higher
+- [Expo](https://expo.dev/) version 42 or higher
+- [React](https://reactjs.org/) version 17 or higher
+
+
+## 📠 Installation
+
+```bash
 npm install expo-clear-input
 ```
 
-## Usage
+## 📎 Usage
 
 ```jsx
 import React from 'react';
@@ -26,7 +40,6 @@ import { StyleSheet, SafeAreaView, View } from 'react-native';
 import { ClearControlTextInput } from 'expo-clear-input';
 
 export default function App() {
-
     const [ text, setText ] = React.useState('');
 
     return (
@@ -42,7 +55,6 @@ export default function App() {
                 }}
                 textColor={'white'}
                 showButtonMode= {'always'}
-                backgroundColor={'#252326'}
             />
             </View>
         </SafeAreaView>
@@ -50,18 +62,14 @@ export default function App() {
 }
 ```
 
-
 Supports custom icon for the button or use the default(recommended) 
 
 ```jsx
+// this is the default icon used
 <Octicons name="x-circle-fill" size={16} color="#ccc8c8" />
 ```
 
-Renders looking something like this:
-
-![input screenshot](https://private-user-images.githubusercontent.com/62257716/289710189-a75346d4-e7ec-4a26-a53e-11481f701928.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDIzNDIyNTUsIm5iZiI6MTcwMjM0MTk1NSwicGF0aCI6Ii82MjI1NzcxNi8yODk3MTAxODktYTc1MzQ2ZDQtZTdlYy00YTI2LWE1M2UtMTE0ODFmNzAxOTI4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjEyVDAwNDU1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWExMDUyNGNjMjlkZmQxZDg4ZWZlNjhhMmU2MGUxZjg5YzkwOThmNmVjYjA2MTRmNzgwYjMxZGI4OTUzMjc4MWMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.bs_QOFniNlfi0dT9GqJPm0PXMgxun1aOkTnir-cCnxI)
-
-## Options
+## 🎛️ Options
 
 | Prop | Type | Description | Default |
 | --- | --- | --- | --- |
@@ -73,8 +81,12 @@ Renders looking something like this:
 | icon | `ReactNode` | The icon to be displayed | `<Octicons name="x-circle-fill" size={16} color="#ccc8c8" />` |
 
 
+## 📲 Example
 
-# Contributing
+Check out the [Interactive Demo on Snack](https://snack.expo.dev/@nini_bee/clearcontroltextinput-example)!
 
-## Pre-requisites
-- must be using WSL or linux or mac for local development bc of the build scripts
+## 👥 Contributing
+
+### Pre-requisites
+- must be on WSL, Linux, or mac for local development or else you won't be able to run the scripts
+- [Node.js](https://nodejs.org/en/) version 14 or higher
