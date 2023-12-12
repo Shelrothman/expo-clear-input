@@ -1,4 +1,4 @@
-import { AccessibilityProps, ColorValue, EnterKeyHintTypeOptions, InputModeOptions, KeyboardTypeOptions, NativeSyntheticEvent, NativeTouchEvent, ReturnKeyTypeOptions, TextInputChangeEventData, TextInputContentSizeChangeEventData, TextInputEndEditingEventData, TextInputFocusEventData, TextInputKeyPressEventData, TextInputScrollEventData, TextInputSelectionChangeEventData, TextInputSubmitEditingEventData, TextInputTextInputEventData } from 'react-native';
+import { TextInputProps, AccessibilityProps, ColorValue, EnterKeyHintTypeOptions, InputModeOptions, KeyboardTypeOptions, NativeSyntheticEvent, NativeTouchEvent, ReturnKeyTypeOptions, TextInputChangeEventData, TextInputContentSizeChangeEventData, TextInputEndEditingEventData, TextInputFocusEventData, TextInputKeyPressEventData, TextInputScrollEventData, TextInputSelectionChangeEventData, TextInputSubmitEditingEventData, TextInputTextInputEventData } from 'react-native';
 
 /**
  * @type ClearControlTextInputProps
@@ -7,7 +7,7 @@ type ClearControlTextInputProps = {
 
     /**
      * all cross-platform-compatible props 
-     * from @type {import('react-native').TextInputProps} 
+     * from @type {TextInputProps} 
      * except for style, which is handled by this component
      */
     textInputProps?: AccessibilityProps & {

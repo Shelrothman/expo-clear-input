@@ -22,7 +22,7 @@ export default function App() {
                     returnKeyType: 'done',
                 }}
                 textColor={'white'}
-                showButtonMode= {'while-editing'}
+                showButtonMode= {'unless-editing'}
                 backgroundColor={'#252326'}
             />
         </SafeAreaView>
