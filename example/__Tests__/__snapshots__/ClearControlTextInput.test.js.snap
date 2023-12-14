@@ -1,0 +1,407 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`showButtonNode prop showButtonMode=while-editing pressable should appear when the text input is focused 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#000",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderColor": "#474115",
+          "borderRadius": 10,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxWidth": "100%",
+          "minWidth": "100%",
+          "paddingRight": 5,
+          "paddingVertical": 5,
+        },
+        {
+          "backgroundColor": "#252326",
+        },
+      ]
+    }
+  >
+    <TextInput
+      keyboardType="default"
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="some search word"
+      returnKeyType="done"
+      secureTextEntry={false}
+      style={
+        [
+          {
+            "borderBottomLeftRadius": 10,
+            "borderRadius": 10,
+            "height": "auto",
+            "padding": 10,
+            "width": "95%",
+          },
+          {
+            "color": "#fff",
+          },
+        ]
+      }
+      value=""
+    />
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 50,
+          "justifyContent": "center",
+          "marginRight": 5,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`showButtonNode prop showButtonMode=while-editing pressable should not appear when the text input is not focused 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#000",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderColor": "#474115",
+          "borderRadius": 10,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxWidth": "100%",
+          "minWidth": "100%",
+          "paddingRight": 5,
+          "paddingVertical": 5,
+        },
+        {
+          "backgroundColor": "#252326",
+        },
+      ]
+    }
+  >
+    <TextInput
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      style={
+        [
+          {
+            "borderBottomLeftRadius": 10,
+            "borderRadius": 10,
+            "height": "auto",
+            "padding": 10,
+            "width": "95%",
+          },
+          {
+            "color": "#fff",
+          },
+        ]
+      }
+      value=""
+    />
+  </View>
+</View>
+`;
+
+exports[`showButtonNode prop showButtonNode="while-editing" pressable should not appear when the text input is not focused 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#000",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderColor": "#474115",
+          "borderRadius": 10,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxWidth": "100%",
+          "minWidth": "100%",
+          "paddingRight": 5,
+          "paddingVertical": 5,
+        },
+        {
+          "backgroundColor": "#252326",
+        },
+      ]
+    }
+  >
+    <TextInput
+      keyboardType="default"
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="some search word"
+      placeholderTextColor="#ccc8c8"
+      returnKeyType="done"
+      secureTextEntry={false}
+      style={
+        [
+          {
+            "borderBottomLeftRadius": 10,
+            "borderRadius": 10,
+            "height": "auto",
+            "padding": 10,
+            "width": "95%",
+          },
+          {
+            "color": "white",
+          },
+        ]
+      }
+      value=""
+    />
+  </View>
+</View>
+`;
+
+exports[`showButtonNode prop while-editing pressable should not appear when the text input is not focused 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#000",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderColor": "#474115",
+          "borderRadius": 10,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxWidth": "100%",
+          "minWidth": "100%",
+          "paddingRight": 5,
+          "paddingVertical": 5,
+        },
+        {
+          "backgroundColor": "#252326",
+        },
+      ]
+    }
+  >
+    <TextInput
+      keyboardType="default"
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="some search word"
+      placeholderTextColor="#ccc8c8"
+      returnKeyType="done"
+      secureTextEntry={false}
+      style={
+        [
+          {
+            "borderBottomLeftRadius": 10,
+            "borderRadius": 10,
+            "height": "auto",
+            "padding": 10,
+            "width": "95%",
+          },
+          {
+            "color": "white",
+          },
+        ]
+      }
+      value=""
+    />
+  </View>
+</View>
+`;
+
+exports[`showButtonNode prop while-editing should disapear when the text input is not focused 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#000",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderColor": "#474115",
+          "borderRadius": 10,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxWidth": "100%",
+          "minWidth": "100%",
+          "paddingRight": 5,
+          "paddingVertical": 5,
+        },
+        {
+          "backgroundColor": "#252326",
+        },
+      ]
+    }
+  >
+    <TextInput
+      keyboardType="default"
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="some search word"
+      placeholderTextColor="#ccc8c8"
+      returnKeyType="done"
+      secureTextEntry={false}
+      style={
+        [
+          {
+            "borderBottomLeftRadius": 10,
+            "borderRadius": 10,
+            "height": "auto",
+            "padding": 10,
+            "width": "95%",
+          },
+          {
+            "color": "white",
+          },
+        ]
+      }
+      value=""
+    />
+  </View>
+</View>
+`;
+
+exports[`showButtonNode prop while-editing should not appear when the text input is not focused 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#000",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderColor": "#474115",
+          "borderRadius": 10,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxWidth": "100%",
+          "minWidth": "100%",
+          "paddingRight": 5,
+          "paddingVertical": 5,
+        },
+        {
+          "backgroundColor": "#252326",
+        },
+      ]
+    }
+  >
+    <TextInput
+      keyboardType="default"
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="some search word"
+      placeholderTextColor="#ccc8c8"
+      returnKeyType="done"
+      secureTextEntry={false}
+      style={
+        [
+          {
+            "borderBottomLeftRadius": 10,
+            "borderRadius": 10,
+            "height": "auto",
+            "padding": 10,
+            "width": "95%",
+          },
+          {
+            "color": "white",
+          },
+        ]
+      }
+      value=""
+    />
+  </View>
+</View>
+`;

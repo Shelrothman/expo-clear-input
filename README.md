@@ -74,14 +74,14 @@ Supports custom icon for the button or use the default(recommended)
 
 ## 🎛️ Options
 
-| Prop | Type | Description | Default |
-| --- | --- | --- | --- |
-| textInputProps | `AccessibilityProps & Partial<TextInputProps>` | All cross-platform-compatible props from `TextInputProps` except for style, which is handled by this component | same defaults as `<TextInput>` |
-| textColor | `string` | The color of the text | "#fff" |
-| backgroundColor | `string` | The background color of the input field | "#252326" |
-| verticalPlacement | `'top'`<br>`'center'`<br>`'bottom'` | The vertical placement of the input field (always on the right side) | `'center'` |
-| showButtonNode | `boolean` | Whether to show the button node; 'always' - visible whether or not its in focus. 'while-editing' - visible only when the input is in focus. 'unless-editing' - visible only when the input is not in focus | `while-editing` |
-| icon | `ReactNode` | The icon to be displayed | `<Octicons name="x-circle-fill" size={16} color="#ccc8c8" />` |
+| Prop              | Type                                           | Description                                                                                                                                                                                                | Default                                                       |
+| ----------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| textInputProps    | `AccessibilityProps & Partial<TextInputProps>` | All cross-platform-compatible props from `TextInputProps` except for style, which is handled by this component                                                                                             | same defaults as `<TextInput>`                                |
+| textColor         | `string`                                       | The color of the text                                                                                                                                                                                      | "#fff"                                                        |
+| backgroundColor   | `string`                                       | The background color of the input field                                                                                                                                                                    | "#252326"                                                     |
+| verticalPlacement | `'top'`<br>`'center'`<br>`'bottom'`            | The vertical placement of the input field (always on the right side)                                                                                                                                       | `'center'`                                                    |
+| showButtonNode    | `boolean`                                      | Whether to show the button node; 'always' - visible whether or not its in focus. 'while-editing' - visible only when the input is in focus. 'unless-editing' - visible only when the input is not in focus | `while-editing`                                               |
+| icon              | `ReactNode`                                    | The icon to be displayed                                                                                                                                                                                   | `<Octicons name="x-circle-fill" size={16} color="#ccc8c8" />` |
 
 ## 👥 Contributing
 
@@ -92,3 +92,26 @@ Supports custom icon for the button or use the default(recommended)
 ### Run the Example
 - for WSL/WSL2 users, run `npm start -- --tunnel` to start up.
 - for Linux/mac users, run `npm start` to start up.
+
+### Test Locally
+- utilize the detailed steps here: <https://dev.to/scooperdev/use-npm-pack-to-test-your-packages-locally-486e>
+  - from root, run `npm pack --pack-destination ~` to create a tarball and place it in your home directory
+  - then modify `./example/package.json` to point to the tarball file in your home directory. For example:
+
+```json
+{
+    // ...
+    "dependencies": {
+        // its important to name it slightly different so it doesn't get confused when running install
+        "expo-clear-input-test": "file:~/expo-clear-input-{VERSION}.tgz"
+    }
+}
+```
+
+- then run `npm install` in the `./example` directory to install the tarball
+  - From there, you can test your changes manually in the example app with any of the start scripts.
+- Before any pull request is made, you must run `npm run test` in the example app to ensure that the changes work as expected and that the tests pass.
+- **A copy of the report is mandatory to be included in the pull request.**
+
+<!-- todo: these above steps could all be replaced with one script command -->
+<!-- todo: automatic need the report for a PR. -->
