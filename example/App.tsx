@@ -2,6 +2,10 @@ import React from 'react';
 import { StyleSheet, SafeAreaView, View } from 'react-native';
 import { ClearControlTextInput } from 'expo-clear-input';
 
+// TODO: look at all the dependencies and remove any unused and unneccesary. ones
+
+// TOdo: figure out if this can work only in bare worflow or if it can work in managed workflow too
+
 export default function App() {
 
 
