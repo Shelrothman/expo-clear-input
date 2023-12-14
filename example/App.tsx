@@ -1,38 +1,25 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, View } from 'react-native';
-import { ClearControlTextInput } from 'expo-clear-input';
+import { StyleSheet, View } from 'react-native';
+import { ClearControlTextInput } from 'expo-clear-input-test';
+
 
 // TODO: look at all the dependencies and remove any unused and unneccesary. ones
 
 // TOdo: figure out if this can work only in bare worflow or if it can work in managed workflow too
 
-export default function App() {
-
+export default function App(props?: any) {
+    const { textInputProps, showButtonMode } = props;
 
     const [ text, setText ] = React.useState('');
 
 
     return (
-        <SafeAreaView style={styles.container}>
-
-            <View style={{ marginHorizontal: 20, marginBottom: 20, width: "80%" }}>
+        <View style={styles.container}>
             <ClearControlTextInput
-                textInputProps={{
-                    onChangeText: (text) => setText(text),
-                    value: text,
-                    placeholder: 'some search word',
-                    placeholderTextColor: '#ccc8c8',
-                    multiline: false,
-                    secureTextEntry: false,
-                    keyboardType: 'default',
-                    returnKeyType: 'done',
-                }}
-                textColor={'white'}
-                showButtonMode= {'always'}
-                backgroundColor={'#252326'}
+                textInputProps={{ ...textInputProps, value: text, onChangeText: setText }}
+                showButtonMode={showButtonMode || 'while-editing'}
             />
-            </View>
-        </SafeAreaView>
+        </View>
     );
 }
 
@@ -42,5 +29,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#000',
         alignItems: 'center',
         justifyContent: 'center',
+        padding: 20,
     },
 });

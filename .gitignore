@@ -8,6 +8,8 @@ jsconfig.json
 
 Todo.md
 
+.jest/cache
+
 # Xcode
 #
 build/
