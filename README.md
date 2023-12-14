@@ -88,3 +88,7 @@ Supports custom icon for the button or use the default(recommended)
 ### Pre-requisites
 - must be on WSL, Linux, or mac for local development or else you won't be able to run the scripts
 - [Node.js](https://nodejs.org/en/) version 18 or higher
+
+### Run the Example
+- for WSL/WSL2 users, run `npm start -- --tunnel` to start up.
+- for Linux/mac users, run `npm start` to start up.
