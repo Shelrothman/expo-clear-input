@@ -25,13 +25,13 @@
         "expo-clear-input",
         "ExpoClearInput"
     ],
-    "repository": "https://github.com/Q118/expo-clear-input",
+    "repository": "https://github.com/ShelRothman/expo-clear-input",
     "bugs": {
-        "url": "https://github.com/Q118/expo-clear-input/issues"
+        "url": "https://github.com/ShelRothman/expo-clear-input/issues"
     },
-    "author": "Shelby Rothman <shel.programmer@gmail.com> (https://github.com/Q118)",
+    "author": "Shelby Rothman <shel.programmer@gmail.com> (https://github.com/ShelRothman)",
     "license": "MIT",
-    "homepage": "https://github.com/Q118/expo-clear-input#readme",
+    "homepage": "https://github.com/ShelRothman/expo-clear-input#readme",
     "dependencies": {},
     "devDependencies": {
         "@types/react": "^18.0.25",
