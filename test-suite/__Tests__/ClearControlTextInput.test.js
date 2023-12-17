@@ -54,7 +54,7 @@ describe('showButtonNode prop', () => {
             act(() => {
                 appNode.toJSON().children[ 0 ].children[ 0 ].props.onBlur();
             });
-            console.log(appNode.toJSON().children[ 0 ].children[ 0 ].props)
+            // console.log(appNode.toJSON().children[ 0 ].children[ 0 ].props)
 // TODO: PICKUP HERE AND understnad why this isnt working and stuff..
 // I AVE DONE THE MANUAL TESTING AND IT IS GOOD SO YOU JUST NEED TO::: -FIX-this-test.
 

@@ -1,0 +1,15 @@
+{
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+        "strict": true,
+        // "paths": {
+            // info: this is how u can get it to work locally during development
+        //     "expo-clear-input": [
+        //         "../src/index"
+        //     ],
+        //     "expo-clear-input/*": [
+        //         "../src/*"
+        //     ]
+        // }
+    }
+}

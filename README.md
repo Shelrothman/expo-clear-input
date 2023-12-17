@@ -85,47 +85,25 @@ Supports custom icon for the button or use the default(recommended)
 
 ## 👥 Contributing
 
+- Please create your own branch off of `main` to get started
+- Then develop, build, test, and create a Pull Request to `main` to trigger a review.
+
 ### Pre-requisites
 - must be on WSL, Linux, or mac for local development or else you won't be able to run the scripts
 - [Node.js](https://nodejs.org/en/) version 18 or higher
 
-### Run the Example
-- for WSL/WSL2 users, run `npm run start:wsl` to start up.
-- for Linux/mac users, run `npm start` to start up.
+### Development
+- during development of your new code, you may want to have an example app up in parrallel to view your changes in real time.
+- YMMV but the recommended approach to this is to create a local expo project using `expo-template-blank-typescript` and import your `./src/*` files into its `App.tsx`. 
+  - Then view your changes in real time.
 
 ### Test Locally
-- utilize the detailed steps here: <https://dev.to/scooperdev/use-npm-pack-to-test-your-packages-locally-486e>
-  - from root, run `npm pack --pack-destination ~` to create a tarball and place it in your home directory
-  - then modify `./example/package.json` to point to the tarball file in your home directory. For example:
-
-```json
-{
-    // ...
-    "dependencies": {
-        // its important to name it slightly different so it doesn't get confused when running install
-        "expo-clear-input-test": "file:~/expo-clear-input-{VERSION}.tgz"
-    }
-}
-```
-
-- then run `npm install` in the `./example` directory to install the tarball
-  - From there, you can test your changes manually in the example app with any of the start scripts.
+- After you've finished your changes, test that the packaged module works as expected.
+  - Set up the testing suite with a local package of the module with your changes:
+    - run from project root: `npm run setuptest`
+  - once that runs successfuly, start up the test:
+    - run from project root:  `npm run test`  
 
 #### Before Submitting a Pull Request
-- Before any pull request is made, you must run the current unit tests and add any new tests for the changes you made.
-- Run `npm run test` in the `/example` app to run the unit tests.
-- **A copy of the report is mandatory to be included in the pull request.**
-
-<!-- 
-todo: these above steps could all be replaced with one script command 
-
-a script that does the pack command
-then cd to the example andadd it into the package.json the "file:~/path/to/your/script"n 
-then delete the nodemodules and pacakges=lock.json and run npm install
-"expo-clear-input" : "file:~/expo-clear-input-{VERSION}.tgz" into the package.json
-and then a cleanup script that has to get run later before you publish it 
-clean up and make /example distro only be for tests and the /local for to use while u go
-add example pictures of the differnt spots
--->
-
-<!-- todo: automatic need the report for a PR. -->
+- **No PR will be accepted without a copy of the testing report**
+- *Please ensure you add new tests if applicable for your new feature*. 
