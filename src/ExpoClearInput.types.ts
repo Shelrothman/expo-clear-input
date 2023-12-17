@@ -361,7 +361,8 @@ type ClearControlTextInputProps = {
     /**
      * The vertical placement of the clear button, always on the right side
      * only relevant for multiline inputs
-     * @default 'top'
+     * @default 'middle'
+     * @warning this is only relevant for multiline inputs and will be ignored for single line inputs
      */
     verticalPlacement?: 'top' | 'middle' | 'bottom';
 
@@ -380,11 +381,10 @@ type ClearControlTextInputProps = {
      */
     icon?: JSX.Element;
     // /** 
-    //  * iconSize - size of the icon
-    //  * @default 16
+    //  * iconColor - size of the icon
+    //  * @default "#ccc8c8"
     //  */
-    // iconSize: number; ???: maybe dont want them to be able to do this .../
-
+    iconColor?: string;
 }
 
 
