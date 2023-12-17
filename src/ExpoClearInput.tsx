@@ -3,14 +3,17 @@ import { Platform } from "react-native";
 import { Octicons } from '@expo/vector-icons';
 import { StyleSheet, View, TextInput, Pressable, NativeSyntheticEvent, TextInputFocusEventData } from 'react-native';
 import ClearControlTextInputProps from "./ExpoClearInput.types";
-/////
+
+
 export default function ClearControlTextInput(props: ClearControlTextInputProps) {
     const [ inFocus, setInFocus ] = React.useState(false);
     const textInputRef = React.useRef<TextInput>(null);
+
     /** middle no matter what if it ain't multiline or defined */
     const verticalPlacement: string = (!props.textInputProps?.multiline) ? 'middle' : (props.verticalPlacement || 'middle');
     /** set while-editing as default if not defined */
     const placementMode: string = props.showButtonMode || 'while-editing';
+
     /** handleFocus sets inFocus to true and calls the onFocus prop if it exists */
     const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
         setInFocus(true);
@@ -25,13 +28,10 @@ export default function ClearControlTextInput(props: ClearControlTextInputProps)
     };
 
     return (
-        <View style={[
-            styles.inputParent,
-            verticalPlacement === 'top' ? [ styles.topPlacement ]
-                : verticalPlacement === 'bottom' ? [ styles.bottomPlacement ]
-                    : [ styles.defaultPlacement ],
-            { backgroundColor: props.backgroundColor || "#252326" }
-        ]}>
+        <View style={[ styles.inputParent, {
+            paddingVertical: verticalPlacement === 'middle' ? 5 : 10,
+            backgroundColor: props.backgroundColor || "#252326"
+        } ]}>
             <TextInput
                 style={[ styles.input, { color: props.textColor || "#fff" } ]}
                 ref={textInputRef}
@@ -64,23 +64,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         /** ALWAYS 15 */
         paddingRight: 15,
-        borderColor: 'transparent', // todo: make this a custom prop, default: 'transparent'
+        borderColor: 'transparent', /* todo: make this a custom prop, default: 'transparent'  */
         borderWidth: .5,
-    },
-    defaultPlacement: {
-        // paddingTop: 5,
-        // paddingBottom: 5,
-        paddingVertical: 5
-    },
-    topPlacement: {
-        // paddingTop: 15,
-        // paddingBottom: 10,
-        paddingVertical: 10
-    },
-    bottomPlacement: {
-        paddingVertical: 10
-        // paddingTop: 10,
-        // paddingBottom: 15,
     },
     input: {
         width: '95%',

@@ -19,8 +19,9 @@ export default function App(props?: any) {
                 textInputProps={{ ...textInputProps, value: text, onChangeText: setText 
                 , multiline: true,
                 }}
-                verticalPlacement='bottom'
-                // showButtonMode={showButtonMode || 'while-editing'}
+                // verticalPlacement='bottom'
+                // verticalPlacement='top'
+                showButtonMode={showButtonMode || 'while-editing'}
             />
         </View>
     );
