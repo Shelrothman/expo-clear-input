@@ -1,8 +1,9 @@
 import React from "react";
+import { Platform } from "react-native";
 import { Octicons } from '@expo/vector-icons';
 import { StyleSheet, View, TextInput, Pressable, NativeSyntheticEvent, TextInputFocusEventData } from 'react-native';
 import ClearControlTextInputProps from "./ExpoClearInput.types";
-
+/////
 export default function ClearControlTextInput(props: ClearControlTextInputProps) {
     const [ inFocus, setInFocus ] = React.useState(false);
     const textInputRef = React.useRef<TextInput>(null);
@@ -67,16 +68,19 @@ const styles = StyleSheet.create({
         borderWidth: .5,
     },
     defaultPlacement: {
-        paddingTop: 5,
-        paddingBottom: 5,
+        // paddingTop: 5,
+        // paddingBottom: 5,
+        paddingVertical: 5
     },
     topPlacement: {
-        paddingTop: 15,
-        paddingBottom: 10,
+        // paddingTop: 15,
+        // paddingBottom: 10,
+        paddingVertical: 10
     },
     bottomPlacement: {
-        paddingTop: 10,
-        paddingBottom: 15,
+        paddingVertical: 10
+        // paddingTop: 10,
+        // paddingBottom: 15,
     },
     input: {
         width: '95%',
@@ -84,6 +88,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         borderBottomLeftRadius: 10,
-        marginRight: 10,
+        /** needed on web for accessibility */
+        marginRight: Platform.OS === 'web' ? 10 : 0,
     }
 });  
