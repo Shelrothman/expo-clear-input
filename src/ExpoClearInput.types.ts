@@ -350,18 +350,19 @@ type ClearControlTextInputProps = {
      * textColor - color of the text in the input
      * @default '#fff'
     */
-    textColor?: string;
+    textColor?: string | ColorValue;
 
     /**
      * backgroundColor - color of the input background
       * @default '#252326'
       */
-    backgroundColor?: string;
+    backgroundColor?: string | ColorValue;
 
     /**
      * The vertical placement of the clear button, always on the right side
      * only relevant for multiline inputs
-     * @default 'top'
+     * @default 'middle'
+     * @warning this is only relevant for multiline inputs and will be ignored for single line inputs
      */
     verticalPlacement?: 'top' | 'middle' | 'bottom';
 
@@ -379,12 +380,12 @@ type ClearControlTextInputProps = {
      * @default <Octicons name="x-circle-fill" size={16} color="#ccc8c8" />
      */
     icon?: JSX.Element;
-    // /** 
-    //  * iconSize - size of the icon
-    //  * @default 16
-    //  */
-    // iconSize: number; ???: maybe dont want them to be able to do this .../
-
+    /** 
+     * iconColor - color of the icon
+     * @default "#ccc8c8"
+     * @warning only relevant if using the default icon
+     */
+    iconColor?: string | ColorValue;
 }
 
 

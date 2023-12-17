@@ -2,10 +2,14 @@
 /.*/
 
 __mocks__
-__tests__
+__TESTS__
 
 /babel.config.js
 /android/src/androidTest/
 /android/src/test/
 /android/build/
-/example/
+/test-suite/
+
+
+/local/
+/assets/

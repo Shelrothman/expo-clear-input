@@ -24,7 +24,9 @@ The [TextInput](https://reactnative.dev/docs/0.72/textinput) component has a [cl
 
 **This library is a solution to the above by working on any platform (web, ios, android) *and* in both single and muilti line `<TextInput>`s.**
 
-![Android and iOS Example](https://private-user-images.githubusercontent.com/62257716/289743965-d04ff8e1-044f-4131-9fd3-c923c81e532d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDIzNTc2NjIsIm5iZiI6MTcwMjM1NzM2MiwicGF0aCI6Ii82MjI1NzcxNi8yODk3NDM5NjUtZDA0ZmY4ZTEtMDQ0Zi00MTMxLTlmZDMtYzkyM2M4MWU1MzJkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjEyVDA1MDI0MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBmZmYyOWYyZjcyYjM0ODZhNWZjZjVkMjhhMjJjYzkyMzhkNDA5MTU4YTQwZGMyZDMxNDhhMjA3MGZkY2Y3OGQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.zyJ3vChPtYBIIVD99Q6PxA2haX0qADgN7O-SKGSu77Y)
+
+<img src="./assets/ios-android.png" width="300" height="300" title="ios and android screenshot" /> <img src="https://private-user-images.githubusercontent.com/62257716/291097238-69362f5e-bf55-41e2-b165-173c19a5d65e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDI4NTU1NTEsIm5iZiI6MTcwMjg1NTI1MSwicGF0aCI6Ii82MjI1NzcxNi8yOTEwOTcyMzgtNjkzNjJmNWUtYmY1NS00MWUyLWIxNjUtMTczYzE5YTVkNjVlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMTclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjE3VDIzMjA1MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTJjMWJjYTg3MGVkN2E0YWQ1MWMxM2ZkMWY1YWZlZWQxZWQzNDZkMmFhYjllOTM3MDYyMzc3NGViYzFhMjEwY2MmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.7HbiruKLvN7qjZlRdPfslvQ9qitHGiVCvuiI4IgagoQ" width="300" height="200" title="web screenshot" />
+
 
 ## ☑️ Prerequisites
 - [React Native](https://reactnative.dev/) version 0.63 or higher
@@ -80,38 +82,30 @@ Supports custom icon for the button or use the default(recommended)
 | textColor         | `string`                                       | The color of the text                                                                                                                                                                                      | "#fff"                                                        |
 | backgroundColor   | `string`                                       | The background color of the input field                                                                                                                                                                    | "#252326"                                                     |
 | verticalPlacement | `'top'`<br>`'center'`<br>`'bottom'`            | The vertical placement of the input field (always on the right side)                                                                                                                                       | `'center'`                                                    |
-| showButtonNode    | `boolean`                                      | Whether to show the button node; 'always' - visible whether or not its in focus. 'while-editing' - visible only when the input is in focus. 'unless-editing' - visible only when the input is not in focus | `while-editing`                                               |
+| showButtonNode    | `boolean`                                      | Whether to show the button node; **always**: visible whether or not its in focus. **while-editing**: visible only when the input is in focus. **unless-editing**: visible only when the input is not in focus | `while-editing`                                               |
 | icon              | `ReactNode`                                    | The icon to be displayed                                                                                                                                                                                   | `<Octicons name="x-circle-fill" size={16} color="#ccc8c8" />` |
 
 ## 👥 Contributing
+
+- Please create your own branch off of `main` to get started
+- Then develop, build, test, and create a Pull Request to `main` to trigger a review.
 
 ### Pre-requisites
 - must be on WSL, Linux, or mac for local development or else you won't be able to run the scripts
 - [Node.js](https://nodejs.org/en/) version 18 or higher
 
-### Run the Example
-- for WSL/WSL2 users, run `npm start -- --tunnel` to start up.
-- for Linux/mac users, run `npm start` to start up.
+### Development
+- during development of your new code, you may want to have an example app up in parrallel to view your changes in real time.
+- YMMV but the recommended approach to this is to create a local expo project using `expo-template-blank-typescript` and import your `./src/*` files into its `App.tsx`. 
+  - Then view your changes in real time.
 
 ### Test Locally
-- utilize the detailed steps here: <https://dev.to/scooperdev/use-npm-pack-to-test-your-packages-locally-486e>
-  - from root, run `npm pack --pack-destination ~` to create a tarball and place it in your home directory
-  - then modify `./example/package.json` to point to the tarball file in your home directory. For example:
+- After you've finished your changes, test that the packaged module works as expected.
+  - Set up the testing suite with a local package of the module with your changes:
+    - run from project root: `npm run setuptest`
+  - once that runs successfuly, start up the test:
+    - run from project root:  `npm run test`  
 
-```json
-{
-    // ...
-    "dependencies": {
-        // its important to name it slightly different so it doesn't get confused when running install
-        "expo-clear-input-test": "file:~/expo-clear-input-{VERSION}.tgz"
-    }
-}
-```
-
-- then run `npm install` in the `./example` directory to install the tarball
-  - From there, you can test your changes manually in the example app with any of the start scripts.
-- Before any pull request is made, you must run `npm run test` in the example app to ensure that the changes work as expected and that the tests pass.
-- **A copy of the report is mandatory to be included in the pull request.**
-
-<!-- todo: these above steps could all be replaced with one script command -->
-<!-- todo: automatic need the report for a PR. -->
+#### Before Submitting a Pull Request
+- **No PR will be accepted without a copy of the testing report**
+- *Please ensure you add new tests if applicable for your new feature.* 
