@@ -22,7 +22,7 @@ export default function ClearControlTextInput(props: ClearControlTextInputProps)
     /** default to "#ccc8c8" if not defined or not a hex value */
     const iconColor: string | ColorValue = (props.iconColor && isHex(props.iconColor)) ? props.iconColor : "#ccc8c8";
     /** default to "#fff" if not defined or not a hex value */
-    const textColor: string | ColorValue = (props.textColor && isHex(props.textColor)) ? props.textColor : "#ccc8c8";
+    const textColor: string | ColorValue = (props.textColor && isHex(props.textColor)) ? props.textColor : "#fff";
 
     /** handleFocus sets inFocus to true and calls the onFocus prop if it exists */
     const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
