@@ -36,6 +36,7 @@ export default function ClearControlTextInput(props: ClearControlTextInputProps)
                 ref={textInputRef}
                 onBlur={handleBlur}
                 onFocus={handleFocus}
+                placeholderTextColor={props.textInputProps?.placeholderTextColor || "#ccc8c8"}
                 {...props.textInputProps}
             />
             {((inFocus && placementMode === 'while-editing') || (!inFocus && placementMode === 'unless-editing') || (placementMode === 'always'))
@@ -66,17 +67,15 @@ const styles = StyleSheet.create({
         borderWidth: .5,
     },
     defaultPlacement: {
-        /** goes to 15 if placement is at top */
         paddingTop: 5,
-        /** goes to 15 if placement is at bottom */
         paddingBottom: 5,
     },
     topPlacement: {
         paddingTop: 15,
-        paddingBottom: 5,
+        paddingBottom: 10,
     },
     bottomPlacement: {
-        paddingTop: 5,
+        paddingTop: 10,
         paddingBottom: 15,
     },
     input: {
@@ -85,5 +84,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         borderBottomLeftRadius: 10,
+        marginRight: 10,
     }
 });  

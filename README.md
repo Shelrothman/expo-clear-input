@@ -110,8 +110,22 @@ Supports custom icon for the button or use the default(recommended)
 
 - then run `npm install` in the `./example` directory to install the tarball
   - From there, you can test your changes manually in the example app with any of the start scripts.
-- Before any pull request is made, you must run `npm run test` in the `/example` app to ensure that the changes work as expected and that the tests pass.
+
+#### Before Submitting a Pull Request
+- Before any pull request is made, you must run the current unit tests and add any new tests for the changes you made.
+- Run `npm run test` in the `/example` app to run the unit tests.
 - **A copy of the report is mandatory to be included in the pull request.**
 
-<!-- todo: these above steps could all be replaced with one script command -->
+<!-- 
+todo: these above steps could all be replaced with one script command 
+
+a script that does the pack command
+then cd to the example andadd it into the package.json the "file:~/path/to/your/script"n 
+then delete the nodemodules and pacakges=lock.json and run npm install
+"expo-clear-input" : "file:~/expo-clear-input-{VERSION}.tgz" into the package.json
+and then a cleanup script that has to get run later before you publish it 
+clean up and make /example distro only be for tests and the /local for to use while u go
+add example pictures of the differnt spots
+-->
+
 <!-- todo: automatic need the report for a PR. -->
