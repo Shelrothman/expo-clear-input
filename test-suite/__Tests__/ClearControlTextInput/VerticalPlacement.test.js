@@ -31,7 +31,7 @@ describe('verticalPlacement prop', () => {
     let componentNode;
 
     /** with multiline */
-    describe('undefined', () => {
+    describe('undefined/default', () => {
         beforeEach(() => {
             act(() => componentNode = renderer.create(<ClearControlTextInput {...defautltProps} />));
         });
