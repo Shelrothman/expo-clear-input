@@ -90,7 +90,7 @@ Supports custom icon for the button or use the default(recommended)
 - [Node.js](https://nodejs.org/en/) version 18 or higher
 
 ### Run the Example
-- for WSL/WSL2 users, run `npm start -- --tunnel` to start up.
+- for WSL/WSL2 users, run `npm run start:wsl` to start up.
 - for Linux/mac users, run `npm start` to start up.
 
 ### Test Locally
@@ -110,7 +110,7 @@ Supports custom icon for the button or use the default(recommended)
 
 - then run `npm install` in the `./example` directory to install the tarball
   - From there, you can test your changes manually in the example app with any of the start scripts.
-- Before any pull request is made, you must run `npm run test` in the example app to ensure that the changes work as expected and that the tests pass.
+- Before any pull request is made, you must run `npm run test` in the `/example` app to ensure that the changes work as expected and that the tests pass.
 - **A copy of the report is mandatory to be included in the pull request.**
 
 <!-- todo: these above steps could all be replaced with one script command -->
