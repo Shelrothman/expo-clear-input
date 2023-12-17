@@ -24,7 +24,7 @@ The [TextInput](https://reactnative.dev/docs/0.72/textinput) component has a [cl
 
 **This library is a solution to the above by working on any platform (web, ios, android) *and* in both single and muilti line `<TextInput>`s.**
 
-![Android and iOS Example](https://private-user-images.githubusercontent.com/62257716/289743965-d04ff8e1-044f-4131-9fd3-c923c81e532d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDIzNTc2NjIsIm5iZiI6MTcwMjM1NzM2MiwicGF0aCI6Ii82MjI1NzcxNi8yODk3NDM5NjUtZDA0ZmY4ZTEtMDQ0Zi00MTMxLTlmZDMtYzkyM2M4MWU1MzJkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjEyVDA1MDI0MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBmZmYyOWYyZjcyYjM0ODZhNWZjZjVkMjhhMjJjYzkyMzhkNDA5MTU4YTQwZGMyZDMxNDhhMjA3MGZkY2Y3OGQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.zyJ3vChPtYBIIVD99Q6PxA2haX0qADgN7O-SKGSu77Y)
+![Android and iOS Example](https://private-user-images.githubusercontent.com/62257716/289743965-d04ff8e1-044f-4131-9fd3-c923c81e532d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDI4NDU3NjgsIm5iZiI6MTcwMjg0NTQ2OCwicGF0aCI6Ii82MjI1NzcxNi8yODk3NDM5NjUtZDA0ZmY4ZTEtMDQ0Zi00MTMxLTlmZDMtYzkyM2M4MWU1MzJkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMTclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjE3VDIwMzc0OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY2NWNlNjI1MmE0ZDU4MjdlMjAyZWEyZTZlZjM5NTdmNmIzNjFhZWNmMmE0MDhkMmM3MmFjZjkzOWZkOGFhZjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.XN6ChtmEOUekz0tQShM2pYMYYebOrGCAzV31NCHow3E)
 
 ## ☑️ Prerequisites
 - [React Native](https://reactnative.dev/) version 0.63 or higher
@@ -80,7 +80,7 @@ Supports custom icon for the button or use the default(recommended)
 | textColor         | `string`                                       | The color of the text                                                                                                                                                                                      | "#fff"                                                        |
 | backgroundColor   | `string`                                       | The background color of the input field                                                                                                                                                                    | "#252326"                                                     |
 | verticalPlacement | `'top'`<br>`'center'`<br>`'bottom'`            | The vertical placement of the input field (always on the right side)                                                                                                                                       | `'center'`                                                    |
-| showButtonNode    | `boolean`                                      | Whether to show the button node; 'always' - visible whether or not its in focus. 'while-editing' - visible only when the input is in focus. 'unless-editing' - visible only when the input is not in focus | `while-editing`                                               |
+| showButtonNode    | `boolean`                                      | Whether to show the button node; **always**: visible whether or not its in focus. **while-editing**: visible only when the input is in focus. **unless-editing**: visible only when the input is not in focus | `while-editing`                                               |
 | icon              | `ReactNode`                                    | The icon to be displayed                                                                                                                                                                                   | `<Octicons name="x-circle-fill" size={16} color="#ccc8c8" />` |
 
 ## 👥 Contributing
@@ -106,4 +106,4 @@ Supports custom icon for the button or use the default(recommended)
 
 #### Before Submitting a Pull Request
 - **No PR will be accepted without a copy of the testing report**
-- *Please ensure you add new tests if applicable for your new feature*. 
+- *Please ensure you add new tests if applicable for your new feature.* 
