@@ -12,7 +12,7 @@ export default function ClearControlTextInput(props: ClearControlTextInputProps)
     /** middle no matter what if it ain't multiline or defined */
     const verticalPlacement: string = (!props.textInputProps?.multiline) ? 'middle' : (props.verticalPlacement || 'middle');
     /** set while-editing as default if not defined */
-    const placementMode: string = props.showButtonMode || 'while-editing';
+    const showButtonMode: string = props.showButtonMode || 'while-editing';
 
     /** handleFocus sets inFocus to true and calls the onFocus prop if it exists */
     const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
@@ -40,7 +40,7 @@ export default function ClearControlTextInput(props: ClearControlTextInputProps)
                 placeholderTextColor={props.textInputProps?.placeholderTextColor || "#ccc8c8"}
                 {...props.textInputProps}
             />
-            {((inFocus && placementMode === 'while-editing') || (!inFocus && placementMode === 'unless-editing') || (placementMode === 'always'))
+            {((inFocus && showButtonMode === 'while-editing') || (!inFocus && showButtonMode === 'unless-editing') || (showButtonMode === 'always'))
                 && <Pressable
                     onPress={() => textInputRef!.current!.clear()}
                     style={[
